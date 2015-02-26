@@ -30,7 +30,7 @@ names(abuse.final)[c(4,5,6,7)] <-
     "Allegation Type",
     "Report Status",
     "Measure Type")
-
+abuse.final.not <- abuse.final[abuse.final$FIPS=="0NA",]
 abuse.final <- abuse.final[!abuse.final$FIPS=="0NA",]
 
 write.csv(abuse.final,"abuse neglect mod.csv",row.names=FALSE, quote=FALSE)
